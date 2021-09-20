@@ -4,6 +4,7 @@ Binary of https://github.com/Apollon77/alexa-cookie
 Without any further ado this will open a proxy of the Amazon login page on http://localhost:8080
 
 Once the login completes successfully, the command window will return the refresh_token required to run alexa_remote_control.sh.
+The token looks something like **Atnr|...**
 
 ATTENTION: make sure to start from the command line as the output needs to be preserved!!!
 
@@ -24,3 +25,15 @@ Options:
   -V, --proxyLogLevel <error|warn|info|debug>     optional: Loglevel of Proxy, default "warn"
   -h, --help                                      display help for command
  ````
+
+For implementation in other projects, the session cookies can be obtained using the refresh_token like this:
+````
+POST /ap/exchangetoken/cookies HTTP/1.1
+x-amzn-identity-auth-domain: api.amazon.de
+
+requested_token_type=auth_cookies
+app_name=Amazon Alexa
+domain=www.amazon.de
+source_token_type=refresh_token
+source_token=Atnr|...
+````
