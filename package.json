@@ -1,0 +1,35 @@
+{
+  "name": "alexa-cookie2-cli",
+  "version": "3.4.3",
+  "description": "Generate Cookie and CSRF for Alexa Remote",
+  "author": {
+    "name": "Apollon77",
+    "email": "ingo@fischer-ka.de"
+  },
+  "contributors": [
+    {
+      "name": "Apollon77",
+      "email": "ingo@fischer-ka.de"
+    }
+  ],
+  "homepage": "https://github.com/Apollon77/alexa-cookie",
+  "license": "MIT",
+  "keywords": [
+    "alexa",
+    "echo",
+    "alexa remote",
+    "layla.amazon.de"
+  ],
+  "dependencies": {
+    "alexa-cookie2": "^3.4.3",
+    "commander": "^8.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Apollon77/alexa-cookie.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Apollon77/alexa-cookie/issues"
+  },
+  "main": "cli.js"
+}
