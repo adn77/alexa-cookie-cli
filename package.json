@@ -24,12 +24,18 @@
     "alexa-cookie2": "^3.4.3",
     "commander": "^8.2.0"
   },
+  "devDependencies": {
+    "pkg": "^5.3.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adn77/alexa-cookie-cli.git"
   },
   "bugs": {
     "url": "https://blog.loetzimmer.de/2021/09/alexa-remote-control-shell-script.html"
+  },
+  "scripts": {
+    "build-binaries": "pkg --targets node12-linux-x64,node12-linux-arm64,node12-win-x64,node12-macos-x64 cli.js"
   },
   "main": "cli.js"
 }
