@@ -37,3 +37,4 @@ domain=www.amazon.de
 source_token_type=refresh_token
 source_token=Atnr|...
 ````
+(make sure to URL-encode, etc.)
