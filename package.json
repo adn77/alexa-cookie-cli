@@ -35,7 +35,7 @@
     "url": "https://blog.loetzimmer.de/2021/09/alexa-remote-control-shell-script.html"
   },
   "scripts": {
-    "build-binaries": "pkg --targets node12-linux-x64,node12-linux-arm64,node12-win-x64,node12-macos-x64 cli.js"
+    "build-binaries": "pkg --targets node12-linux-x64,node12-win-x64,node12-macos-x64 cli.js"
   },
   "main": "cli.js"
 }
