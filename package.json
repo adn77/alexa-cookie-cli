@@ -1,10 +1,10 @@
 {
-  "name": "alexa-cookie2-cli",
+  "name": "alexa-cookie-cli",
   "version": "3.4.3",
-  "description": "Generate Cookie and CSRF for Alexa Remote",
+  "description": "Generate refresh_token for Alexa remote control",
   "author": {
-    "name": "Apollon77",
-    "email": "ingo@fischer-ka.de"
+    "name": "adn77",
+    "email": "alex@loetzimmer.de"
   },
   "contributors": [
     {
@@ -12,13 +12,13 @@
       "email": "ingo@fischer-ka.de"
     }
   ],
-  "homepage": "https://github.com/Apollon77/alexa-cookie",
+  "homepage": "https://blog.loetzimmer.de/2021/09/alexa-remote-control-shell-script.html",
   "license": "MIT",
   "keywords": [
     "alexa",
     "echo",
-    "alexa remote",
-    "layla.amazon.de"
+    "alexa remote control",
+    "alexa.amazon.de"
   ],
   "dependencies": {
     "alexa-cookie2": "^3.4.3",
@@ -26,10 +26,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Apollon77/alexa-cookie.git"
+    "url": "git+https://github.com/adn77/alexa-cookie-cli.git"
   },
   "bugs": {
-    "url": "https://github.com/Apollon77/alexa-cookie/issues"
+    "url": "https://blog.loetzimmer.de/2021/09/alexa-remote-control-shell-script.html"
   },
   "main": "cli.js"
 }
