@@ -68,6 +68,9 @@ jobs:
         prerelease: ${{ contains(steps.extract_release.outputs.VERSION, '-') }}
         body: ${{ steps.extract_release.outputs.BODY }}
 
+    - name: Show directory contents
+      run: ls -al
+
     - name: Upload Alexa-Cookie binary Windows
       id: upload-release-asset-windows
       uses: actions/upload-release-asset@v1
