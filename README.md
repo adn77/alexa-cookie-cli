@@ -1,7 +1,7 @@
 # alexa-cookie-cli
-Binary of https://github.com/Apollon77/alexa-cookie (using pkg - https://github.com/vercel/pkg)
+Binary of https://github.com/Apollon77/alexa-cookie (using pkg - https://github.com/vercel/pkg), get the [latest release here](https://github.com/adn77/alexa-cookie-cli/releases/latest).
 
-Without any further ado this will open a proxy of the Amazon login page on http://localhost:8080
+Without any further ado this will open a proxy of the Amazon login page on http://localhost:8080.
 
 Once the login completes successfully, the command window will return the refresh_token required to run alexa_remote_control.sh.
 The token looks something like `Atnr|...`
