@@ -3,7 +3,8 @@ const commander = require('commander');
 const program = new commander.Command();
 
 program
-  .option('-l, --logger <log target>', 'Where to log to', console.log)
+  .option('-q, --quiet', 'Non-interactive, output refresh_token on StdOut and exit')
+  .option('-l, --logger <log target>', 'Where to log to', console.error)
   .option('-p, --amazonPage <page>', 'optional: possible to use with different countries, default is "amazon.de"')
   .option('-b, --baseAmazonPage <amazon.com|amazon.co.jp>', 'optional: Change the Proxy Amazon Page - all "western countries" directly use amazon.com! Change to amazon.co.jp for Japan')
   .option('-a, --amazonPageProxyLanguage <lang>', 'optional: language to be used for the Amazon Sign-in page the proxy calls. default is "de_DE"')
@@ -23,3 +24,7 @@ alexaCookie.generateAlexaCookie( program.opts(), (err, result) => {
         console.error( err + ' / ' + JSON.stringify(result));
     }
 });
+
+if (! program.opts().quiet) {
+    while(true);
+}

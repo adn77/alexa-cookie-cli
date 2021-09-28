@@ -6,13 +6,12 @@ Without any further ado this will open a proxy of the Amazon login page on http:
 Once the login completes successfully, the command window will return the refresh_token required to run alexa_remote_control.sh.
 The token looks something like `Atnr|...`
 
-**ATTENTION:** make sure to start from the command line as the output needs to be preserved!!!
-
 Additional options:
 ````
 Usage: cli [options]
 
 Options:
+  -q, --quiet                                     Non-interactive, output refresh_token on StdOut and exit
   -l, --logger <log target>                       Where to log to
   -p, --amazonPage <page>                         optional: possible to use with different countries, default is "amazon.de"
   -b, --baseAmazonPage <amazon.com|amazon.co.jp>  optional: Change the Proxy Amazon Page - all "western countries" directly use amazon.com! Change to amazon.co.jp for Japan
