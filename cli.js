@@ -19,12 +19,11 @@ program.parse();
 alexaCookie.generateAlexaCookie( program.opts(), (err, result) => {
     if (result && result.refreshToken) {
         console.log(result.refreshToken);
+        if (! program.opts().quiet) {
+            while(true);
+        }
         alexaCookie.stopProxyServer();
     }else{
         console.error( err + ' / ' + JSON.stringify(result));
     }
 });
-
-if (! program.opts().quiet) {
-    while(true);
-}
