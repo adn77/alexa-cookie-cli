@@ -1,6 +1,6 @@
 {
   "name": "alexa-cookie-cli",
-  "version": "3.4.3",
+  "version": "4.0.1",
   "description": "Generate refresh_token for Alexa remote control",
   "author": {
     "name": "adn77",
@@ -21,7 +21,7 @@
     "alexa.amazon.de"
   ],
   "dependencies": {
-    "alexa-cookie2": "^3.4.3",
+    "alexa-cookie2": "^4.0.1",
     "commander": "^8.2.0"
   },
   "devDependencies": {
