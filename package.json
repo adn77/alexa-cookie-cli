@@ -1,6 +1,6 @@
 {
   "name": "alexa-cookie-cli",
-  "version": "4.0.1",
+  "version": "5.0.1",
   "description": "Generate refresh_token for Alexa remote control",
   "author": {
     "name": "adn77",
@@ -21,11 +21,11 @@
     "alexa.amazon.de"
   ],
   "dependencies": {
-    "alexa-cookie2": "^4.0.1",
-    "commander": "^8.2.0"
+    "alexa-cookie2": "^5.0.1",
+    "commander": "^11.1.0"
   },
   "devDependencies": {
-    "pkg": "^5.3.2"
+    "pkg": "^5.8.1"
   },
   "repository": {
     "type": "git",
@@ -35,7 +35,7 @@
     "url": "https://blog.loetzimmer.de/2021/09/alexa-remote-control-shell-script.html"
   },
   "scripts": {
-    "build-binaries": "pkg --targets node12-linux-x64,node12-win-x64,node12-macos-x64 cli.js"
+    "build-binaries": "pkg --targets node16-linux-x64,node16-win-x64,node16-macos-x64 cli.js"
   },
   "main": "cli.js"
 }
