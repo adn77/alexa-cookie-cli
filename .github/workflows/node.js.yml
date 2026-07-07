@@ -42,12 +42,12 @@ jobs:
         VERSION="${{ github.ref }}"
         VERSION=${VERSION##*/}
         VERSION=${VERSION##*v}
-        echo "::set-output name=VERSION::$VERSION"
-        BODY=$(git show -s --format=%b)
-        BODY="${BODY//'%'/'%25'}"
-        BODY="${BODY//$'\n'/'%0A'}"
-        BODY="${BODY//$'\r'/'%0D'}"
-        echo "::set-output name=BODY::$BODY"
+        echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
+        EOF="ab1234567890"
+        BODY=$(git show -s --format=%s%n%b)
+        echo "BODY<<$EOF" >> $GITHUB_OUTPUT
+        echo "$BODY" >> $GITHUB_OUTPUT
+        echo "$EOF" >> $GITHUB_OUTPUT
 
     - name: Install dependencies
       run: npm ci
