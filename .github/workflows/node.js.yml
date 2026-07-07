@@ -57,49 +57,19 @@ jobs:
     
     - name: Create Github Release
       id: create_release
-      uses: actions/create-release@v1
+      uses: softprops/action-gh-release@v3
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: ${{ github.ref }}
-        release_name: Release v${{ steps.extract_release.outputs.VERSION }}
+        name: Release v${{ steps.extract_release.outputs.VERSION }}
         draft: false
         # Prerelease versions create prereleases on Github
         prerelease: ${{ contains(steps.extract_release.outputs.VERSION, '-') }}
-        body: ${{ steps.extract_release.outputs.BODY }}
-
-    - name: Show directory contents
-      run: ls -al
-
-    - name: Upload Alexa-Cookie binary Windows
-      id: upload-release-asset-windows
-      uses: softprops/action-gh-release@v3
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./cli-win.exe
-        asset_name: alexa-cookie-cli-win-x64.exe
-        asset_content_type: application/vnd.microsoft.portable-executable
-
-    - name: Upload Alexa-Cookie binary MacOS
-      id: upload-release-asset-macos
-      uses: softprops/action-gh-release@v3
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./cli-macos
-          asset_name: alexa-cookie-cli-macos-x64
-          asset_content_type: application/mac-binhex40
-
-    - name: Upload Alexa-Cookie binary Linux
-      id: upload-release-asset-Linux
-      uses: softprops/action-gh-release@v3
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./cli-linux
-        asset_name: alexa-cookie-cli-linux-x64
-        asset_content_type: application/x-executable
+        body: |
+          ${{ steps.extract_release.outputs.BODY }}
+          (release artifacts are x64 only)
+        files: |
+          alexa-cookie-cli-win.exe
+          alexa-cookie-cli-macos
+          alexa-cookie-cli-linux
