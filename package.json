@@ -1,41 +1,39 @@
 {
   "name": "alexa-cookie-cli",
-  "version": "5.0.1",
+  "version": "5.0.5",
   "description": "Generate refresh_token for Alexa remote control",
-  "author": {
-    "name": "adn77",
-    "email": "alex@loetzimmer.de"
-  },
-  "contributors": [
-    {
-      "name": "Apollon77",
-      "email": "ingo@fischer-ka.de"
-    }
-  ],
-  "homepage": "https://blog.loetzimmer.de/2021/09/alexa-remote-control-shell-script.html",
-  "license": "MIT",
   "keywords": [
     "alexa",
     "echo",
     "alexa remote control",
     "alexa.amazon.de"
   ],
-  "dependencies": {
-    "alexa-cookie2": "^5.0.1",
-    "commander": "^11.1.0"
-  },
-  "devDependencies": {
-    "pkg": "^5.8.1"
+  "homepage": "https://blog.loetzimmer.de/2021/09/alexa-remote-control-shell-script.html",
+  "bugs": {
+    "url": "https://blog.loetzimmer.de/2021/09/alexa-remote-control-shell-script.html"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adn77/alexa-cookie-cli.git"
   },
-  "bugs": {
-    "url": "https://blog.loetzimmer.de/2021/09/alexa-remote-control-shell-script.html"
-  },
+  "license": "MIT",
+  "author": "adn77 <alex@loetzimmer.de>",
+  "contributors": [
+    {
+      "name": "Apollon77",
+      "email": "ingo@fischer-ka.de"
+    }
+  ],
+  "type": "commonjs",
+  "main": "cli.js",
   "scripts": {
-    "build-binaries": "pkg --targets node16-linux-x64,node16-win-x64,node16-macos-x64 cli.js"
+    "build-binaries": "pkg --targets node24-linux-x64,node24-win-x64,node24-macos-x64 cli.js"
   },
-  "main": "cli.js"
+  "dependencies": {
+    "alexa-cookie2": "^5.0.5",
+    "commander": "^15.0.0"
+  },
+  "devDependencies": {
+    "@yao-pkg/pkg": "^6.21.0"
+  }
 }

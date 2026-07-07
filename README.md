@@ -1,5 +1,5 @@
 # alexa-cookie-cli
-Binary of https://github.com/Apollon77/alexa-cookie (using pkg - https://github.com/vercel/pkg), get the [latest release here](https://github.com/adn77/alexa-cookie-cli/releases/latest).
+Binary of https://github.com/Apollon77/alexa-cookie (using pkg - https://github.com/yao-pkg/pkg), get the [latest release here](https://github.com/adn77/alexa-cookie-cli/releases/latest).
 
 Without any further ado this will open a proxy of the Amazon login page on http://127.0.0.1:8080.
 
