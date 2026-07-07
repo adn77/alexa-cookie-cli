@@ -25,13 +25,13 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [24.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v6
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v6
       with:
         node-version: ${{ matrix.node-version }}
 
@@ -73,7 +73,7 @@ jobs:
 
     - name: Upload Alexa-Cookie binary Windows
       id: upload-release-asset-windows
-      uses: actions/upload-release-asset@v1
+      uses: softprops/action-gh-release@v3
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -84,7 +84,7 @@ jobs:
 
     - name: Upload Alexa-Cookie binary MacOS
       id: upload-release-asset-macos
-      uses: actions/upload-release-asset@v1
+      uses: softprops/action-gh-release@v3
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -95,7 +95,7 @@ jobs:
 
     - name: Upload Alexa-Cookie binary Linux
       id: upload-release-asset-Linux
-      uses: actions/upload-release-asset@v1
+      uses: softprops/action-gh-release@v3
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
